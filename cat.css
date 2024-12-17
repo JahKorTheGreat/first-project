@@ -1,0 +1,84 @@
+html {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header, nav, main, footer {
+    display: grid;
+    place-content: center;
+    grid-template-columns: 100%;
+    text-align: center;
+}
+
+header, footer{
+    position: sticky;
+    background-color:beige;
+    color: rgb(64, 41, 11);
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header {
+    background-color: blanchedalmond;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #599fff, #fd94c6);
+    background-clip: text;
+    color: transparent;
+}
+
+nav {
+    color: dimgray;
+    padding: 0.5rem;
+    border-bottom: 2px solid dimgray;
+    font-weight: bolder;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.products {
+    display: flex;
+    justify-content: space-evenly; /* This will space out the products evenly */
+    gap: 20px; /* Add space between each product */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens if needed */
+}
+
+.product-1, .product-2, .product-3, .product-4 {
+    width: 23%; /* Adjust the width of each product (23% allows 4 products in a row with space) */
+    text-align: center; /* Center the text inside each product */
+    border: 1px solid #ccc; /* Optional: Adds a border around each product */
+    padding: 5px; /* Adds some padding around each product */
+}
+
+img {
+    width: 100%; /* Ensures images fill the product div */
+    height: auto;
+}
+
+.button {
+    margin-top: 10px; /* Adds space above the button */
+    padding: 10px 20px; /* Adds padding to the button */
+    background-color: #008cba; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove the button border */
+    cursor: pointer; /* Makes the button clickable */
+}
+
+.button:hover {
+    background-color: #005f73; /* Darkens button color on hover */
+}
